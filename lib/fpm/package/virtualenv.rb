@@ -93,8 +93,8 @@ class FPM::Package::Virtualenv < FPM::Package
         File.join(installdir,
                   virtualenv_name)
       end
-
-    virtualenv_build_folder = build_path(virtualenv_folder)
+    build_path = '/tmp/fpm_virtualenv'
+    virtualenv_build_folder = build_path + virtualenv_folder
 
     ::FileUtils.mkdir_p(virtualenv_build_folder)
 
